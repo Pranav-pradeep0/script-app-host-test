@@ -1,0 +1,111 @@
+.loader:before {
+  border-top-color: #c19d60;
+}
+
+/* ---------Page preload--------------------------------------*/
+.loader-wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  z-index: 20;
+  transform: scale(1);
+}
+.loader:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid;
+  border-radius: 50%;
+  animation: spin2 0.5s infinite linear;
+  border-radius: 100%;
+  z-index: 1;
+}
+@keyframes spin2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.cd-loader-layer,.cd-loader-layer-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+}
+.cd-loader-layer .loader-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-98%);
+  height: 100%;
+  width: 3000%;
+  background: url(@assets/images/ink2.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.cd-loader-layer-light .loader-layer-light {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-98%);
+  height: 100%;
+  width: 3000%;
+  background: url(@assets/images/ink3.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.cd-loader-layer.visible,
+.cd-loader-layer-light.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.cd-loader-layer.opening .loader-layer,
+.cd-loader-layer-light.opening .loader-layer-light {
+  animation: cd-sequence 0.8s steps(24);
+  animation-fill-mode: forwards;
+}
+
+.cd-loader-layer.closing .loader-layer,
+.cd-loader-layer-light.closing .loader-layer-light {
+  animation: cd-sequence-reverse 0.8s steps(24);
+  animation-fill-mode: forwards;
+}
+@keyframes cd-sequence {
+  0% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+}
+@keyframes cd-sequence-reverse {
+  0% {
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-2%);
+  }
+}

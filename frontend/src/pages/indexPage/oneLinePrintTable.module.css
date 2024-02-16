@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+
+  height: 100%;
+  padding: 20px;
+  background-color: white;
+}
+
+.table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  background: #f2f2f2;
+  padding: 10px;
+  border-right: 1px solid rgb(193, 191, 191);
+  text-align: left;
+}
+
+.tableHead:last-child {
+  border-right: none;
+}
+
+.tableData {
+  border: 1px solid #dddddd;
+  min-height: 50px;
+  height: auto;
+  padding: 10px 5px;
+  text-align: left;
+  font-size: 12px;
+}

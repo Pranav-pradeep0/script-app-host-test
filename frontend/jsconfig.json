@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@pages": [
+        "src/pages/index.js"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@common": [
+        "src/components/common/index.js"
+      ],
+      "@common/*": [
+        "src/components/common/*"
+      ],
+      "@script": [
+        "./src/components/script/index.js"
+      ],
+      "@script/*": [
+        "./src/components/script/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@hooks": [
+        "src/utils/hooks/index.js"
+      ],
+      "@/*": [
+        "src/*"
+      ],
+    },
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}

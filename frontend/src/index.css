@@ -1,0 +1,242 @@
+:root {
+  --primary-main: #242424;
+  --primary-light: #2d2d2d;
+  --primary-dark: #1c1c1c;
+  --primary-contrast-text: #fff;
+  --primary-low-contrast-text: rgba(255, 255, 255, 0.5);
+  --secondary-main: #fff;
+  --secondary-light: #f7f7f7;
+  --secondary-lighter: #f2f2f2;
+  --secondary-contrast-text: #000;
+  --secondary-low-contrast-text: rgba(0, 0, 0, 0.6);
+  --secondary-low-contrast-icons: rgba(0, 0, 0, 0.3);
+  --tertiary-main: linear-gradient(
+    94deg,
+    #c5ac57 10.11%,
+    #c5ac57 46.89%,
+    #e1d5ab 85.01%
+  );
+}
+
+html {
+  overflow: hidden;
+}
+
+/* auto complete dropdown styling */
+.typeahead-anchor {
+  position: relative;
+}
+.mentions-menu {
+  width: fit-content;
+}
+.characters-limit {
+  color: #888;
+  font-size: 12px;
+  text-align: right;
+  display: block;
+  position: absolute;
+  left: 12px;
+  bottom: 5px;
+}
+
+.characters-limit.characters-limit-exceeded {
+  color: red;
+}
+
+.dropdown {
+  z-index: 100;
+  display: block;
+  position: fixed;
+  box-shadow:
+    0 12px 28px 0 rgba(0, 0, 0, 0.2),
+    0 2px 4px 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  min-height: 40px;
+  background-color: #fff;
+}
+
+.dropdown .item {
+  margin: 0 8px 0 8px;
+  padding: 8px;
+  color: #050505;
+  cursor: pointer;
+  line-height: 16px;
+  font-size: 15px;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 0;
+  max-width: 250px;
+  min-width: 100px;
+}
+
+.dropdown .item.fontsize-item,
+.dropdown .item.fontsize-item .text {
+  min-width: unset;
+}
+
+.dropdown .item .active {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.dropdown .item:first-child {
+  margin-top: 8px;
+}
+
+.dropdown .item:last-child {
+  margin-bottom: 8px;
+}
+
+.dropdown .item:hover {
+  background-color: #eee;
+}
+
+.dropdown .item .text {
+  display: flex;
+  line-height: 20px;
+  flex-grow: 1;
+  min-width: 150px;
+}
+
+.dropdown .divider {
+  width: auto;
+  background-color: #eee;
+  margin: 4px 8px;
+  height: 1px;
+}
+
+.typeahead-popover {
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.typeahead-popover ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.typeahead-popover ul::-webkit-scrollbar {
+  display: none;
+}
+
+.typeahead-popover ul {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.typeahead-popover ul li {
+  margin: 0;
+  min-width: 180px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.typeahead-popover ul li.selected {
+  background: #eee;
+}
+
+.typeahead-popover li {
+  margin: 0 8px 0 8px;
+  padding: 8px;
+  color: #050505;
+  cursor: pointer;
+  line-height: 16px;
+  font-size: 15px;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 0;
+}
+
+.typeahead-popover li.active {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.typeahead-popover li:first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.typeahead-popover li:last-child {
+  border-radius: 0px 0px 8px 8px;
+}
+
+.typeahead-popover li:hover {
+  background-color: #eee;
+}
+
+.typeahead-popover li .text {
+  display: flex;
+  line-height: 20px;
+  flex-grow: 1;
+  min-width: 150px;
+}
+.typeahead-popover li .icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  user-select: none;
+  margin-right: 8px;
+  line-height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Example CSS in your stylesheets */
+.parenthetical span::placeholder {
+  text-align: right;
+  /* Add any additional styling for the placeholder here */
+}
+.parentheticalMain::before {
+  content: '(';
+  margin-right: 4px;
+}
+
+.parentheticalMain {
+  display: flex;
+}
+
+.parentheticalMain::after {
+  content: ')';
+  margin-left: 4px;
+}
+
+.p-inputtext {
+  padding: 0;
+  padding-block: 12px;
+  box-shadow: none;
+  border-color: #cfcfcf;
+}
+
+.p-autocomplete-loader {
+  display: none;
+}
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+  box-shadow: none !important;
+}
+
+.MuiAutocomplete-endAdornment {
+  display: none !important;
+}

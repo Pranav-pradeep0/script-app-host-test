@@ -1,0 +1,70 @@
+.editor-inner {
+  flex: 1;
+  background: #fff;
+  position: relative;
+}
+
+.editor-input {
+  height: 100%;
+  resize: none;
+  font-size: 15px;
+  caret-color: rgb(5, 5, 5);
+  position: relative;
+  tab-size: 1;
+  outline: 0;
+  padding: 15px 10px;
+  caret-color: #444;
+}
+
+.editor-placeholder {
+  color: #999;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 1rem;
+  left: 0.7rem;
+  font-size: 15px;
+  user-select: none;
+  display: inline-block;
+  pointer-events: none;
+}
+.side {
+  position: absolute;
+  z-index: 1;
+}
+
+.side-left,
+.side-right {
+  border-right: 1px dashed rgba(0, 0, 0, 0.10);
+}
+
+.side-top,
+.side-bottom {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.10);
+}
+
+.side-left {
+  left: 0px;
+}
+
+.side-top {
+  top: 0px;
+}
+
+.side-right {
+  right: -1px;
+}
+
+.side-bottom {
+  bottom: -1px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
