@@ -13,7 +13,7 @@ pids
 *.pid.lock
 
 # Environment variables
-.env
+# .env
 
 # VS Code settings
 .vscode/
